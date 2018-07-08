@@ -22,10 +22,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+// add
 app.get('/users/:name', function (req, res) {
   res.send('Hello, ' + req.params.name);
 })
 
+// add
 app.get('/index.html', function (req, res) {
    res.sendFile( __dirname + "/" + "index.html" );
 })
